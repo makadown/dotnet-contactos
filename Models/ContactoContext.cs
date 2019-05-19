@@ -2,12 +2,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace contactos.Models
 {
-    public class ContactosContext: DBContext {
-        public ContactosContext(DBContextOptions<ContactosContext> options) : base(options)
+    public class ContactosContext: DbContext {
+        public ContactosContext(DbContextOptions<ContactosContext> options) : base(options)
         {
             
         }
 
-        public DBSet<Contacto> Contacto {get;set;}
+        public DbSet<Contacto> Contacto {get;set;}
     }
 }

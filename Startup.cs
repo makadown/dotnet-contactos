@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.EntityFramworkCore;
+using Microsoft.EntityFrameworkCore;
 using contactos.Models;
 
 namespace contactos
@@ -29,7 +29,7 @@ namespace contactos
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<ContactosContext>(options => 
-                    options.UseSqlServer(Configuration.GetConnectionString("ContactosDb")));
+                    options.UseSqlite(Configuration.GetConnectionString("ContactosDb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
